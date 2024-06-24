@@ -5,7 +5,7 @@ $(document).ready(function () {
     });
 
     // Close the navbar collapse when a nav-link is clicked (optional)
-    $('.navbar-nav link').on('click', function () {
+    $('.navbar-nav .link').on('click', function () {
         $('#navbarNav').removeClass('show');
     });
 });
