@@ -137,6 +137,7 @@ margin: 20px;
 }
 nav li a , .dropdown-menu a {
 text-decoration: none;
+font-size: 16px;
 text-transform: uppercase;
 color: black;
 font-weight: 700;
@@ -167,10 +168,9 @@ display: none;
  .landing {
   background-color: #efefef; 
   padding: 70px 0; 
-  min-height: 89vh; /* Minimum height of 100% of the viewport height */
+  min-height: 89vh; /* Minimum height of 89% of the viewport height */
   height: auto; /* Allow the height to adjust based on content */
 }
-
 
 .landing .container {
   max-width: 1200px; 
@@ -192,70 +192,78 @@ display: none;
 }
 
 .image img {
-max-width: 100%; /* Make image responsive */
-height: auto;
-background-color: transparent; 
-
+  max-width: 100%; /* Make image responsive */
+  height: auto;
+  background-color: transparent; 
 }
+
 @media (max-width: 992px) {
-  .container {
-      flex-direction: column; /* Stack items vertically on smaller screens */
+  .landing .container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
   }
   .landing-text,
-  .image {
-      flex: auto; /* Take full width on smaller screens */
-      text-align: center; /* Center align text and image */
-      margin-bottom: 20px; /* Add space between sections */
-      margin-top: 25px;
+  .landing .image {
+    flex: auto; /* Take full width on smaller screens */
+    text-align: center; /* Center align text and image */
+    margin-bottom: 20px; /* Add space between sections */
+    margin-top: 25px;
   }
 }
-.landing h1{
-color: #274C5B;
-margin-bottom: 35px;
-font-weight: bold;
-line-height: 1.5;
+
+.landing h1 {
+  color: #274C5B;
+  margin-bottom: 35px;
+  font-weight: bold;
+  line-height: 1.5;
 }
-@media(max-width:768px){
-.landing h1{
-  font-size: 35px;
+
+@media (max-width: 768px) {
+  .landing h1 {
+    font-size: 35px;
+  }
 }
-}
+
 .landing p {
-font-size: 40px;
-font-family: 'Yellowtail', cursive; /* Specify the Yellowtail font */
-color: #68A47F;
+  font-size: 40px;
+  font-family: 'Yellowtail', cursive; /* Specify the Yellowtail font */
+  color: #68A47F;
 }
-@media(max-width:768px){
-.landing p{
-  font-size: 35px;
+
+@media (max-width: 768px) {
+  .landing p {
+    font-size: 35px;
+  }
 }
+
+.explore {
+  background-color: #efd371;
+  color: #274C5B;
+  border: none;
+  border-radius: 18px;
+  width: 220px;
+  height: 70px;
+  font-size: 22px;
+  font-weight: bold;
+  transition: background-color 0.5s, color 0.5s; /* Smooth transition */
 }
-.explore{
-background-color:#efd371;
-color: #274C5B;
-border: none;
-border-radius: 18px;
-width: 220px;
-height: 70px;
-font-size: 22px;
-font-weight: bold;
-transition: 0.5s;
-}
-.explore:hover{
+
+.explore:hover {
   background-color: #274C5B;
   color: white;
+}
 
+@media (max-width: 768px) {
+  .explore {
+    font-size: 20px;
+    width: 180px;
+    height: 50px;
+  }
 }
-@media(max-width:768px){
-.explore {
-  font-size: 20px;
-  width: 180px;
-height: 50px;
+
+.explore span {
+  padding-left: 5px;
 }
-}
-.explore span{
-padding-left: 5px;
-}
+
  /*end landing*/
 
  /*start offer*/
