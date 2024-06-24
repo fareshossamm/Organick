@@ -896,7 +896,7 @@ input[type="text"]::placeholder {
     font-weight: 700;
     transition: 0.5s;
   }
-  button:hover {
+  .Subscribe button:hover {
     background-color: #efd371;
     color: #274C5B;
 }
