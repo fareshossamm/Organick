@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organick</title>
+    <title>Organick Business</title>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     
     <!-- Font Awesome Library -->
@@ -25,7 +25,7 @@
 
 <body>
     <!-- start nav -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <img class="logo" src="img/logo.png" alt="Logo">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
                     <a class="link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="link" href="#">About</a>
+                    <a class="link" href="#about">About</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -54,7 +54,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="link" href="#">Shop</a>
+                    <a class="link" href="#products">Shop</a>
                 </li>
                 <li class="nav-item">
                     <a class="link" href="#">News</a>
@@ -112,7 +112,7 @@
     <!-- end offer -->
 
     <!-- start about -->
-     <div class="about">
+     <div class="about" id="about">
         <div class="container">
             <div class="image">
                 <img src="img/believe.png" alt="">
@@ -155,7 +155,7 @@
     <!-- end about -->
 
     <!-- start products -->
-    <div class="products">
+    <div class="products" id="products">
         <div class="tittle">
             <h5 class="tail green text-center">Categories</h5>
             <h2 class="text-center">Our Products</h2>
@@ -413,6 +413,25 @@
         </div>
      </div>
     <!-- end for you -->
+
+    <!-- start categories  -->
+    <div class="categories">
+        <div class="item">
+            <img src="img/juice.jpg" alt="Organic Juice">
+            <p>Organic Juice</p>
+        </div>
+        <div class="item">
+            <img src="img/food.jpg" alt="Organic Food">
+            <p>Organic Food</p>
+        </div>
+        <div class="item">
+            <img src="img/cookis.jpg" alt="Organic Cookies">
+            <p>Organic Cookies</p>
+        </div>
+    </div>
+    
+    <!-- end categories  -->
+
      <!-- start Subscribe -->
       <div class="Subscribe">
     <div class="container">
@@ -426,6 +445,50 @@
     </div>
 
      <!-- end Subscribe -->
+
+     <!-- start footer -->
+     <div class="footer">
+        <div class="column contact">
+            <h2>conatct us</h2>
+            <h3 class="info">email</h3>
+            <p>needhelp@Organia.com</p>
+            <h3 class="info">phone</h3>
+            <p>666 888 888</p>
+            <h3 class="info">Address</h3>
+            <p>88 road, borklyn street, USA</p>
+
+        </div>
+      
+        <div class="column pages">
+            <h2 >Utility Pages</h2>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-caret-right"></i> Style Guide</a></li>
+                <li><a href="#"><i class="fa-solid fa-caret-right"></i> 404 Not Found</a></li>
+                <li><a href="#"><i class="fa-solid fa-caret-right"></i> Password Protected</a></li>
+                <li><a href="#"><i class="fa-solid fa-caret-right"></i> Licences</a></li>
+                <li><a href="#"><i class="fa-solid fa-caret-right"></i> Changelog</a></li>
+            </ul>
+        </div>
+        <div class="column logo-footer">
+            <div class="logo">
+                <img class="organic" src="img/logo.png" alt="Organick logo">
+            </div>
+            <p class="p-logo">Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing</p>
+            <div class="social-links">
+                <a class="grey" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="grey" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="grey" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="grey" href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="copy">
+        
+        <p>Copyright © <span class="bold">Organick</span> | Designed by <span class="bold">Fares Hossam</span> </p>
+    </footer>
+    
+     <!-- end footer -->
 
 
 <!-- jQuery -->
