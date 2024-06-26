@@ -900,7 +900,7 @@ border: 1px solid #c3c3c3;
   }
   .Subscribe .container {
     background-image: url(../img/newsletter.jpg);
-    height: auto;
+    height: 300px;
     text-align: center;
     color: white;
     display: flex;

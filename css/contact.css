@@ -1,0 +1,67 @@
+
+/* sart talk */
+.talk{
+    margin: 50px 0;
+
+}
+.talk .container .content{
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+}
+
+.talk .container .image{
+  flex: 1;
+  margin-right: 50px;
+}
+.talk .container .image {
+    flex: 1; /* Take remaining space */
+    padding: 0 20px; /* Adjust padding */
+  }
+  
+  .talk .container .text {
+    flex: 1; /* Take remaining space */
+    text-align: start; 
+    margin-top: 15px;
+  }
+  .talk .container .image img{
+  border-radius: 25px;
+  }
+  .talk .container .text h2{
+font-size: 32px;
+line-height: 1.3;
+margin-bottom: 20px;
+
+  }
+ .talk .container .text p{
+    font-size: 19px;
+    line-height: 1.7;
+
+  }
+.messege{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.call{
+    display: flex;
+}
+.call i{
+   font-size: 25px;
+   color: #274C5B;
+   padding-right: 15px;
+   margin-top: -5px;
+}
+.mobile p {
+    margin-top: -12px;
+    color: #777;
+}
+.mobile h3 {
+    margin-top: -12px;
+    color: #274C5B;
+    text-transform: capitalize;
+    font-size: 25px;
+
+}
+/* end talk */

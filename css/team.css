@@ -1,0 +1,138 @@
+
+
+  /* strat header */
+
+  .header {
+    position: relative;
+    width: fit-content; 
+    display: inline-block; 
+}
+
+.header img {
+    display: block; 
+    width: 100%; 
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #274C5B;
+    font-size: 50px; 
+    margin: 0; 
+    padding: 0; 
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+@media (max-width: 768px) {
+    .text-overlay {
+      font-size: 35px;
+    }
+  }
+  /* end header */
+
+    /* strat content */
+
+.content {
+  padding:20px 0;
+}
+.tittle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.green{
+  margin-top: 20px;
+  color: #68A47F;
+  font-size: 50px;
+  font-family: 'Yellowtail', cursive; 
+}
+.blue{
+color: #274C5B;
+text-transform: capitalize;
+font-weight: 700;
+margin-bottom: 15px;
+}
+.grey{
+color: #777;
+line-height: 1.5;
+font-size: 18px;
+margin-bottom: 25px;
+} 
+@media(max-width:768px){
+  .grey{
+    
+    font-size: 14px;
+    } 
+    .blue{
+   font-size: 25px;
+      }
+      .green{
+      
+        font-size: 35px;
+       
+      }
+}
+.team-card {
+  border: none;
+  margin-bottom: 30px;
+}
+.team-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0 0;
+}
+.team-card .name {
+  padding: 20px 15px;
+  background-color:#ffff;
+  border: none;
+}
+.team-card{
+  border: none;
+}
+.name h3{
+  font-size: 22px;
+  color: #274C5B;
+  text-transform: capitalize;
+  font-weight: 700;
+  }
+  @media(max-width:768px){
+    .name h3{
+      font-size: 20px;
+      
+      }
+  }
+.team-card .name h5 {
+  color: #68A47F;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Yellowtail', cursive;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+@media(max-width:768px){
+  .team-card .name h5 {
+    font-size: 20px;
+ 
+  }
+}
+.team-card .social-icons {
+  margin-top: 10px;
+  position: absolute;
+  right: 5px;
+  bottom: 25px;
+}
+.team-card .social-icons a {
+  color: #274C5B;
+  margin: 0 10px;
+  font-size: 25px;
+  text-decoration: none;
+}
+@media(max-width:768px){
+  .team-card .social-icons a {
+    font-size: 20px;
+  }
+}
+
+    /* end content */
