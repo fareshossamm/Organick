@@ -599,6 +599,16 @@ font-size: 18px;
    .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
+    .grid-item .rating {
+      color: #ffc107;
+  }
+}
+@media (max-width: 768px) {
+  
+   .grid-item .rating {
+     color: #ffc107;
+     margin-top: 7px;
+ }
 }
 .dropdown-divider{
   border: 1px solid #c3c3c3;
@@ -825,6 +835,10 @@ border: 1px solid #c3c3c3;
   .foru .content .view .all {
     display: none; /* Hide the original view link on small screens */
 }
+.card-item .rating {
+  color: #ffc107;
+  margin-top: 7px;
+}
 
 }
   /* end for u */
@@ -900,7 +914,7 @@ border: 1px solid #c3c3c3;
   }
   .Subscribe .container {
     background-image: url(../img/newsletter.jpg);
-    height: 300px;
+    height: 330px;
     text-align: center;
     color: white;
     display: flex;
@@ -989,7 +1003,7 @@ input[type="text"]::placeholder {
 }
 
 .footer .contact .info {
-    color: #5b737d;
+    color: #777;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 700;

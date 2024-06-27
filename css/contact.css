@@ -1,67 +1,325 @@
 
+
 /* sart talk */
-.talk{
-    margin: 50px 0;
-
-}
-.talk .container .content{
-    display: flex;
-    justify-content: space-between;
-    text-align: start;
+.talk {
+  margin: 50px 0;
 }
 
-.talk .container .image{
+.talk .container .content {
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.talk .container .image {
   flex: 1;
   margin-right: 50px;
+  padding: 0 20px;
+  text-align: center; /* Center image on small screens */
 }
-.talk .container .image {
-    flex: 1; /* Take remaining space */
-    padding: 0 20px; /* Adjust padding */
-  }
-  
-  .talk .container .text {
-    flex: 1; /* Take remaining space */
-    text-align: start; 
-    margin-top: 15px;
-  }
-  .talk .container .image img{
+
+.talk .container .image img {
   border-radius: 25px;
-  }
-  .talk .container .text h2{
-font-size: 32px;
-line-height: 1.3;
-margin-bottom: 20px;
-
-  }
- .talk .container .text p{
-    font-size: 19px;
-    line-height: 1.7;
-
-  }
-.messege{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  max-width: 100%; /* Ensure image is responsive */
 }
 
-.call{
-    display: flex;
+.talk .container .text {
+  flex: 1;
+  text-align: start;
+  margin-top: 15px;
 }
-.call i{
-   font-size: 25px;
-   color: #274C5B;
-   padding-right: 15px;
-   margin-top: -5px;
+
+.talk .container .text h2 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 20px;
 }
+
+.talk .container .text p {
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.call {
+  display: flex;
+}
+
+.call i {
+  font-size: 25px;
+  color: #274C5B;
+  padding-right: 15px;
+  margin-top: -5px;
+}
+
 .mobile p {
-    margin-top: -12px;
-    color: #777;
+  margin-top: -12px;
+  color: #777;
 }
-.mobile h3 {
-    margin-top: -12px;
-    color: #274C5B;
-    text-transform: capitalize;
-    font-size: 25px;
 
+.mobile h3 {
+  margin-top: -12px;
+  color: #274C5B;
+  text-transform: capitalize;
+  font-size: 25px;
 }
+.talk .social-links {
+  justify-content: start;
+}
+/* Responsive styles */
+@media (max-width: 992px) {
+  .talk .container .content {
+      flex-direction: column; 
+      
+  }
+  .text-overlay{
+    font-size: 30px;
+  }
+
+  .talk .container .image {
+      margin-right: 0;
+      margin-bottom: 20px; /* Add space between image and text */
+  }
+
+  .talk .container .text h2 {
+      font-size: 28px; /* Adjust font size for smaller screens */
+  }
+
+  .talk .container .text p {
+      font-size: 17px; /* Adjust font size for smaller screens */
+  }
+
+  .call i {
+      font-size: 20px; /* Adjust icon size for smaller screens */
+  }
+
+  .mobile h3 {
+      font-size: 22px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .talk .container .text h2 {
+      font-size: 24px; /* Further adjust font size for very small screens */
+  }
+
+  .talk .container .text p {
+      font-size: 16px; /* Further adjust font size for very small screens */
+  }
+
+  .call i {
+      font-size: 18px; /* Further adjust icon size for very small screens */
+  }
+
+  .mobile h3 {
+      font-size: 20px; /* Further adjust font size for very small screens */
+  }
+}
+
 /* end talk */
+
+/* start farm */
+.farms {
+  margin: 50px 0;
+  position: relative;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.container {
+  position: relative;
+  text-align: right; /* Align text to the right */
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 25px;
+}
+
+.our-farm {
+  position: absolute;
+  top: 50%;
+  right: 20%; /* Adjusted for better positioning */
+  transform: translateY(-50%);
+  background: #FFFFFF; 
+  padding: 20px;
+  border-radius: 25px;
+  width: 500px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+.our-farm h2.green {
+  font-size: 30px;
+}
+
+.our-farm h1.blue {
+  font-size: 40px;
+}
+
+.our-farm p.grey {
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.call {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.call i {
+  font-size: 25px;
+  color: #68A47F;
+  padding-right: 15px;
+  margin-top: -48px;
+}
+
+.mobile h3 {
+  color: #274C5B;
+  text-transform: capitalize;
+  font-size: 25px;
+  margin-bottom: 7px;
+}
+
+.mobile p {
+  margin-top: -5px;
+  color: #777;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .our-farm {
+    width: 500px; 
+    padding: 15px;
+    right: 20%; 
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .container img {
+    display: none; /* Hide image on very small screens */
+  }
+
+  .container {
+    text-align: center; /* Center text for very small screens */
+  }
+
+  .our-farm {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: none; /* Remove transform */
+    width: 100%; /* Take full width */
+    padding: 20px; /* Adjust padding */
+    margin: 0 auto; /* Center card */
+    box-shadow: none; /* Remove box shadow for a cleaner look */
+  }
+
+  .our-farm h2.green {
+    font-size: 20px;
+  }
+
+  .our-farm h1.blue {
+    font-size: 20px;
+  }
+
+  .our-farm p.grey {
+    font-size: 14px;
+  }
+
+  .call i {
+    font-size: 18px;
+  }
+
+  .mobile h3 {
+    font-size: 18px;
+  }
+}
+    /* end farm  */
+
+  /* Form row styling */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.form-group {
+  padding: 10px;
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  color: #274C5B;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left; /* Align label text to the left */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #7EB693;
+  border-radius: 18px;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #7EB693; /* Change border color on focus */
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(126, 182, 147, 0.4); /* Green shadow on focus */
+}
+.form-group textarea {
+  resize: vertical;
+}
+
+.required {
+  color: red;
+  margin-left: 5px;
+}
+
+form .btn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #274C5B;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+}
+
+form .btn:hover {
+  background-color: #49c275;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+    padding: 0;
+  }
+}
