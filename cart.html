@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+</head>
+<body>
+    <div class="cart-container">
+        <h2>Your Cart  <i class="fa-solid fa-cart-shopping"></i></h2>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="empty-cart-message" id="empty-cart-message" style="display: none;">Your cart is currently empty.</div>
+        <div class="cart-total" id="cart-total"></div>
+        <button class="delete-all-btn" id="delete-all-btn">Delete All</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalContainer = document.getElementById('cart-total');
+            const item = document.getElementsByClassName('grid-item');
+            const deleteAllBtn = document.getElementById('delete-all-btn');
+            const emptyCartMessage = document.getElementById('empty-cart-message');
+            let total = 0;
+
+            function updateCart() {
+                cartItemsContainer.innerHTML = '';
+                total = 0;
+
+                if (cart.length === 0) {
+                    emptyCartMessage.style.display = 'block';
+                    deleteAllBtn.style.display = 'none';
+                    cartTotalContainer.style.display = 'none';
+                } else {
+                    emptyCartMessage.style.display = 'none';
+                    deleteAllBtn.style.display = 'block';
+                    cartTotalContainer.style.display = 'block';
+
+                    cart.forEach((item, index) => {
+                        const cartItem = document.createElement('div');
+                        cartItem.className = 'cart-item';
+
+                        const img = document.createElement('img');
+                        img.src = item.imgSrc;
+                        cartItem.appendChild(img);
+
+                        const info = document.createElement('div');
+                        info.className = 'cart-item-info';
+
+                        const title = document.createElement('div');
+                        title.className = 'title';
+                        title.textContent = item.title;
+                        info.appendChild(title);
+
+
+                        cartItem.appendChild(info);
+
+                        const price = document.createElement('div');
+                        price.className = 'cart-item-price';
+                        price.textContent = `$${item.price.toFixed(2)}`;
+                        cartItem.appendChild(price);
+
+                        const deleteBtn = document.createElement('button');
+                        deleteBtn.className = 'delete-btn';
+                        deleteBtn.textContent = 'X';
+                        deleteBtn.addEventListener('click', function() {
+                            cart.splice(index, 1);
+                            localStorage.setItem('cart', JSON.stringify(cart));
+                            updateCart();
+                        });
+                        cartItem.appendChild(deleteBtn);
+
+                        cartItemsContainer.appendChild(cartItem);
+                        total += item.price;
+                    });
+
+                    cartTotalContainer.textContent = `Total: $${total.toFixed(2)}`;
+                    localStorage.setItem('cartTotal', total.toFixed(2));
+                }
+            }
+
+            deleteAllBtn.addEventListener('click', function() {
+                cart.length = 0;
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCart();
+            });
+
+            updateCart();
+        });
+    </script>
+</body>
+</html>

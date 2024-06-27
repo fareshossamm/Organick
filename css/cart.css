@@ -1,0 +1,96 @@
+        .cart-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .cart-container h2 {
+            text-align: center;
+            margin: 50px 0;
+            color: #274C5B;
+            text-transform: capitalize;
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .cart-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .cart-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+            border-radius: 15px;
+            cursor: pointer;
+            
+        }
+        .cart-item img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .cart-item-info {
+            margin-bottom: 10px;
+        }
+        .cart-item-price {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .cart-total {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            background-color: #274C5B;
+            color: #ffff;
+            font-weight: 700        ;
+            width: 100%;
+            border-radius: 20px;
+            padding: 15px;
+        }
+        .star i {
+            color: gold;
+        }
+        .delete-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+        .delete-all-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            font-size: 22px;
+            font-weight: 700;
+            border-radius: 10px;
+        }
+.title{
+    font-size: 30px;
+    font-weight: 700;
+    color: #274C5B;
+    margin-bottom: 15px;
+}
+.cart-item-price{
+    font-size: 25px;
+    color: #68A47F;
+    font-weight: 700;
+}
+.empty-cart-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}

@@ -1,0 +1,116 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-details {
+    display: flex;
+    gap: 20px;
+}
+
+.image {
+   width: 350px;
+   height: 400px;
+   flex: 1;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#product-ratings {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#product-description {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.quantity-input {
+    width: 50px;
+    height: 30px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.button {
+    padding: 15px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+}
+.buttons .button:first-child {
+    background-color: #274C5B;
+    color: white;
+}
+.buttons .button:nth-child(2) {
+    /* Your styles here */
+    background-color: #EFF6F1;
+    color: #274C5B;
+}
+
+
+p{
+    text-align: center;
+
+}
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+}

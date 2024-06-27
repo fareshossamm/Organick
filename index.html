@@ -21,7 +21,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 </head>
-
+<style>
+    form:focus {
+    box-shadow: green; /* Green shadow on focus */
+  }
+</style>
 
 <body>
     <!-- start nav -->
@@ -29,7 +33,7 @@
         <img class="logo" src="img/logo.png" alt="Logo">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar"><i class="fa-solid fa-bars-staggered"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <button class="navbar-toggler close-icon" type="button" aria-label="Close navigation">
@@ -60,11 +64,17 @@
                     <a class="link" href="team.html">team</a>
                 </li>
             </ul>
-            <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <form class="form-inline my-2 my-lg-0">
+                <input style="width: 250px;" id="search" class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass "></i></button>
+
+            </form>
+           
             <div class="cart">
-                <i class=" link fa-solid fa-cart-shopping"></i>
-                <div class="cart-badge">3</div>
+                <a href="cart.html"><i class="link fa-solid fa-cart-shopping"></i></a>
+                <div class="cart-badge" id="cart-count">0</div>
             </div>
+            
         </div>
     </nav>
 
@@ -155,7 +165,7 @@
 
     <!-- start products -->
     <div class="products" id="products">
-        <div class="tittle">
+        <div class="title">
             <h5 class="tail green text-center">Categories</h5>
             <h2 class="text-center">Our Products</h2>
         </div>
@@ -165,11 +175,10 @@
                 <div class="category">Vegetable</div>
                 <h5 class="card-title">Calabrese Broccoli</h5>
                 <div class="dropdown-divider"></div>
-
                 <p class="card-text">
                     <span class="old">$22.00</span>
                     <span class="price">$13.00</span>
-                    <span class=" star float-right">
+                    <span class="star float-right">
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
@@ -177,18 +186,17 @@
                         <i class="far fa-star rating"></i>
                     </span>
                 </p>
+                <button class="add-to-cart btn btn-primary" data-img-src="img/p1.png" data-title="Calabrese Broccoli" data-price="13.00">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="grid-item">
                 <img src="img/p3.png" alt="">
                 <div class="category">Fresh</div>
-
-                <h5 class="card-title">Fresh Banana Fruites</h5>
+                <h5 class="card-title">Fresh Banana Fruits</h5>
                 <div class="dropdown-divider"></div>
-
                 <p class="card-text">
                     <span class="old">$17.00</span>
                     <span class="price">$14.00</span>
-                    <span class="float-right">
+                    <span class="star float-right">
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
@@ -196,18 +204,17 @@
                         <i class="far fa-star rating"></i>
                     </span>
                 </p>
+                <button class="add-to-cart btn btn-primary" data-img-src="img/p3.png" data-title="Fresh Banana Fruits" data-price="14.00">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="grid-item">
                 <img src="img/p4.png" alt="">
                 <div class="category">Millets</div>
-
                 <h5 class="card-title">White Nuts</h5>
                 <div class="dropdown-divider"></div>
-
                 <p class="card-text">
                     <span class="old">$20.00</span>
                     <span class="price">$15.00</span>
-                    <span class="float-right">
+                    <span class="star float-right">
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
@@ -215,18 +222,17 @@
                         <i class="fas fa-star rating"></i>
                     </span>
                 </p>
+                <button class="add-to-cart btn btn-primary" data-img-src="img/p4.png" data-title="White Nuts" data-price="15.00">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="grid-item">
                 <img src="img/p2.png" alt="">
                 <div class="category">Vegetable</div>
-
                 <h5 class="card-title">Vegan Red Tomato</h5>
                 <div class="dropdown-divider"></div>
-
                 <p class="card-text">
                     <span class="old">$25.00</span>
                     <span class="price">$17.00</span>
-                    <span class="float-right">
+                    <span class="star float-right">
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
                         <i class="far fa-star rating"></i>
@@ -234,17 +240,17 @@
                         <i class="far fa-star rating"></i>
                     </span>
                 </p>
+                <button class="add-to-cart btn btn-primary" data-img-src="img/p2.png" data-title="Vegan Red Tomato" data-price="17.00">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="grid-item">
                 <img src="img/p5.png" alt="">
                 <h5 class="card-title">Mung Bean</h5>
                 <div class="dropdown-divider"></div>
                 <div class="category">Health</div>
-
                 <p class="card-text">
                     <span class="old">$25.00</span>
                     <span class="price">$19.00</span>
-                    <span class=" star float-right">
+                    <span class="star float-right">
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
@@ -252,18 +258,17 @@
                         <i class="far fa-star rating"></i>
                     </span>
                 </p>
+                <button class="add-to-cart btn btn-primary" data-img-src="img/p5.png" data-title="Mung Bean" data-price="19.00">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="grid-item">
-                <img style="width: 250px; margin-left: 25px;" src="img/p8.png" alt="">
+                <img style="width: 250px; margin-left: 25px;" src="img/p12.jpeg" alt="">
                 <div class="category">Nuts</div>
-
                 <h5 class="card-title">Brown Hazelnut</h5>
                 <div class="dropdown-divider"></div>
-
                 <p class="card-text">
                     <span class="old">$18.00</span>
                     <span class="price">$14.00</span>
-                    <span class="float-right">
+                    <span class="star float-right">
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
@@ -271,18 +276,17 @@
                         <i class="far fa-star rating"></i>
                     </span>
                 </p>
+                <button class="add-to-cart btn btn-primary" data-img-src="img/p12.jpeg" data-title="Brown Hazelnut" data-price="14.00">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="grid-item">
                 <img src="img/p9.png" alt="">
                 <div class="category">Fresh</div>
-
-                <h5 class="card-title">Eggs </h5>
+                <h5 class="card-title">Eggs</h5>
                 <div class="dropdown-divider"></div>
-
                 <p class="card-text">
                     <span class="old">$10.00</span>
                     <span class="price">$5.00</span>
-                    <span class="float-right">
+                    <span class="star float-right">
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
@@ -290,18 +294,17 @@
                         <i class="far fa-star rating"></i>
                     </span>
                 </p>
+                <button class="add-to-cart btn btn-primary" data-img-src="img/p9.png" data-title="Eggs" data-price="5.00">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="grid-item">
                 <img src="img/p10.png" alt="">
                 <div class="category">Fresh</div>
-
                 <h5 class="card-title">Zelco Suji Elaichi Rusk</h5>
                 <div class="dropdown-divider"></div>
-
                 <p class="card-text">
                     <span class="old">$55.00</span>
                     <span class="price">$37.00</span>
-                    <span class="float-right">
+                    <span class="star float-right">
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
                         <i class="fas fa-star rating"></i>
@@ -309,18 +312,40 @@
                         <i class="fas fa-star rating"></i>
                     </span>
                 </p>
-                
-            </div>    
-  
-          </div>
-          <div class="more">
-            <a href="#" class="load-more">Load More  <span><i class="fa-solid fa-circle-arrow-right"></i></span></a>
-
-          </div>
-
+                <button class="add-to-cart btn btn-primary" data-img-src="img/p10.png" data-title="Zelco Suji Elaichi Rusk" data-price="37.00">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+        <div class="more">
+            <a href="#" class="load-more">Load More <span><i class="fa-solid fa-circle-arrow-right"></i></span></a>
+        </div>
     </div>
+    </div>
+    </div>
+    
+
 
     <!-- end products -->
+      <!-- Bootstrap Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Item Added to Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>The item has been added to your cart.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Continue Shopping</button>
+                    <a class="btn btn-success" href="cart.html">View Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- start for you -->
      <div class="foru">
@@ -488,8 +513,63 @@
     </footer>
     
      <!-- end footer -->
+  
 
+    <!-- Your Custom JavaScript -->
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const successModal = new bootstrap.Modal(document.getElementById('successModal'));
 
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const imgSrc = this.getAttribute('data-img-src');
+                    const title = this.getAttribute('data-title');
+                    const price = parseFloat(this.getAttribute('data-price'));
+
+                    // You can handle adding to cart logic here (localStorage or any backend/API)
+
+                    // Show success modal
+                    successModal.show();
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartCountElement = document.getElementById('cart-count');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Update cart count on page load
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cartCountElement.textContent = cart.length;
+            }
+
+            updateCartCount();
+
+            // Function to add item to cart
+            function addToCart(product) {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push(product);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                document.dispatchEvent(new CustomEvent('cartUpdated'));
+            }
+
+            // Listen for cartUpdated event to update cart count
+            document.addEventListener('cartUpdated', updateCartCount);
+
+            // Example add-to-cart buttons (replace with your actual product data and event listeners)
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    const product = {
+                        imgSrc: this.dataset.imgSrc,
+                        title: this.dataset.title,
+                        price: parseFloat(this.dataset.price)
+                    };
+                    addToCart(product);
+                });
+            });
+        });
+    </script>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <!-- Popper.js -->
