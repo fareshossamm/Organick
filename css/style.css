@@ -130,18 +130,28 @@ text-decoration: none;
 color: #68A47F;
 
 }
-.close-icon {
-display: none;
+
+.navbar-toggler {
+  font-size: 20px;
+  border: none; /* Removes the border */
+  background: none; /* Removes any background if needed */
+  display: flex;
+  align-items: center; /* Aligns the items vertically centered */
 }
 
-@media (max-width: 992px) {
-.navbar-collapse.show .close-icon {
-    display: block;
-    position: absolute;
-    right: 25px;
-    top: 100px;
-    transition: 0.9s;
+.cart-mobile {
+  position: relative; /* Required for positioning the badge */
 }
+
+.cart-badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
 }
 
  /*end header*/
@@ -484,7 +494,7 @@ cursor: pointer;
 
   /* start products */
   .products{
-    margin: 150px 0 90px;
+    margin: 50px 0 90px;
     padding: 50px 0;
   }
   @media (max-width: 768px) {
