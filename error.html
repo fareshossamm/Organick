@@ -23,51 +23,52 @@
     </head>
 
 <body>
-    <!-- start nav -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <img class="logo" src="img/logo.png" alt="Logo">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+ <!-- start nav -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+    <img class="logo" src="img/logo.png" alt="Logo">
+    <div class="d-flex align-items-center">
+        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar"><i class="fa-solid fa-bars-staggered"></i></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <button class="navbar-toggler close-icon" type="button" aria-label="Close navigation">
-                <span class="fa-solid fa-times"></span>
-            </button>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="link" href="index.html#about">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Pages
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="contact.html">Contact Us</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="error.html">Services</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="link" href="shop.html">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="link" href="team.html">team</a>
-                </li>
-            </ul>
-            <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <div class="cart">
-                <i class=" link fa-solid fa-cart-shopping"></i>
-                <div class="cart-badge">3</div>
-            </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="link" href="index.html#about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Pages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="contact.html">Contact Us</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="error.html">Services</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="link" href="team.html">team</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input style="width: 250px;" id="search" class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass "></i></button>
+        </form>
+        <div class="cart  ml-2">
+            <a href="cart.html"><i class="link fa-solid fa-cart-shopping"></i></a>
+            <div class="cart-badge" id="cart-count">0</div>
         </div>
-    </nav>
-
-    <!-- end nav -->
+    </div>
+</nav>
+<!-- end nav -->
     <main>
         <section class="error-page">
                 <img src="img/error.png" alt="" class="error-image">
@@ -125,6 +126,16 @@
     </footer>
     
      <!-- end footer -->
-    <script src="script.js"></script>
+      <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+<!-- Custom Script -->
+<script src="js/script.js"></script>
+
 </body>
 </html>

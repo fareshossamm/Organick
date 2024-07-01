@@ -87,13 +87,17 @@
 
 }
 @media (max-width: 992px) {
-    
+   
     .error-image {
         display: none; /* Show image on larger screens */
     }
 }
 @media (max-width: 768px) {
-
+    .button {
+        padding: 15px;
+        font-size: 16px;
+    
+    }
    
     .error-content h1 {
       

@@ -1,4 +1,10 @@
 
+$(document).ready(function () {
+    $('.navbar-nav .nav-item .link').click(function () {
+        $('.navbar-collapse').collapse('hide');
+    });
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const products = document.querySelectorAll('.grid-item');
