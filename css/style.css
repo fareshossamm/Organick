@@ -509,7 +509,7 @@ cursor: pointer;
   .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-gap: 50px;
     margin: 35px;
 }
 .card-title{
